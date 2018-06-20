@@ -8,13 +8,9 @@ class Hotel():
 		self.total_rooms = total_rooms
 		self.empty_rooms = empty_rooms
 	def add_hotel(self ):
-		for hotel in Hotel.hotels:
-			if [self.number, self.hotel_name, self.city, self.total_rooms, self.empty_rooms] in Hotel.hotels:
-				return None
-			else:
-				return Hotel.hotels.append([self.number, self.hotel_name, self.city,
-											self.total_rooms, self.empty_rooms])
-
+		Hotel.hotels.append([self.number, self.hotel_name, self.city,
+			self.total_rooms, self.empty_rooms])
+		
 	def list_hotels_in_city(self):
 		list_hotel = []
 		i = 0
@@ -23,6 +19,7 @@ class Hotel():
 				list_hotel.append(Hotel.hotels[i][1] + " " + str(Hotel.hotels[i][4]))
 			i += 1
 		return list_hotel
+
 
 
 
