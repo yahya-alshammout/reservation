@@ -3,7 +3,6 @@ class Customer():
 	def __init__(self, customer_name):
 		self.customer_name = customer_name
 	def add_customer(self):
-		for customer in Customer.customers:
 			if [customer_name] in Customer.customers:
 				return None
 			
